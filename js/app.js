@@ -48,9 +48,11 @@ function deleteTransaction(id) {
         return transaction.id !== id;
     });
 
+    saveTransactions();
+
     displayTransactions();
 
-    updateSummary()
+    updateSummary();
 
 }
 
@@ -121,13 +123,20 @@ if (Number(amountInput.value) <= 0) {
     console.log(transaction);
 
     transactions.push(transaction);
-    console.log(transactions);
+  
+    saveTransactions();
 
     displayTransactions();
 
-    updateSummary() 
+    updateSummary();
 
     form.reset();
 
-
 });
+
+
+loadTransactions();
+
+displayTransactions();
+
+updateSummary();
