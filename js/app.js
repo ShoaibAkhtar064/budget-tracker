@@ -56,26 +56,61 @@ function deleteTransaction(id) {
 
 }
 
-function updateSummary() {
+
+function calculateIncome() {
 
     let totalIncome = 0;
-    let totalExpenses = 0;
 
     transactions.forEach(function (transaction) {
 
         if (transaction.type === "income") {
+
             totalIncome += transaction.amount;
-        } else {
-            totalExpenses += transaction.amount;
+
         }
 
     });
 
-    const totalBalance = totalIncome - totalExpenses;
+    return totalIncome;
 
-    balance.textContent = `$${totalBalance.toFixed(2)}`;
-    income.textContent = `$${totalIncome.toFixed(2)}`;
-    expenses.textContent = `$${totalExpenses.toFixed(2)}`;
+}
+
+function calculateExpense() {
+
+    let totalExpense = 0;
+
+    transactions.forEach(function (transaction) {
+
+        if (transaction.type === "expense") {
+
+            totalExpense += transaction.amount;
+
+        }
+
+    });
+
+    return totalExpense;
+
+}
+
+
+function calculateBalance() {
+
+    return calculateIncome() - calculateExpense();
+
+}
+
+
+function updateSummary() {
+
+    balance.textContent =
+        `$${calculateBalance().toFixed(2)}`;
+
+    income.textContent =
+        `$${calculateIncome().toFixed(2)}`;
+
+    expenses.textContent =
+        `$${calculateExpense().toFixed(2)}`;
 
 }
 
