@@ -37,6 +37,18 @@
         </div>
       </section>
 
+      <section class="charts">
+        <div class="chart-card">
+          <h2>Expense by Category</h2>
+          <canvas id="expenseChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h2>Income vs Expense</h2>
+          <canvas id="incomeExpenseChart"></canvas>
+        </div>
+      </section>
+
       <section class="transaction-form">
         <h2>Add Transaction</h2>
 
@@ -105,9 +117,9 @@
     <footer>
       <p>© 2026 Budget Tracker</p>
     </footer>
-
-    <script src="/js/storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/chart.js"></script>
     <script src="js/app.js"></script>
-
   </body>
 </html>

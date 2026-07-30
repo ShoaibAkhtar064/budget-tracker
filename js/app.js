@@ -54,6 +54,8 @@ function deleteTransaction(id) {
 
     updateSummary();
 
+    renderExpenseChart();
+
 }
 
 
@@ -165,6 +167,8 @@ if (Number(amountInput.value) <= 0) {
 
     updateSummary();
 
+    renderExpenseChart();
+
     form.reset();
 
 });
@@ -175,3 +179,5 @@ loadTransactions();
 displayTransactions();
 
 updateSummary();
+
+renderExpenseChart();
