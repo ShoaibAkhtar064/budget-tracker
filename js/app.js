@@ -56,6 +56,8 @@ function deleteTransaction(id) {
 
     renderExpenseChart();
 
+    renderIncomeExpenseChart();
+
 }
 
 
@@ -169,6 +171,8 @@ if (Number(amountInput.value) <= 0) {
 
     renderExpenseChart();
 
+    renderIncomeExpenseChart();
+
     form.reset();
 
 });
@@ -181,3 +185,5 @@ displayTransactions();
 updateSummary();
 
 renderExpenseChart();
+
+renderIncomeExpenseChart();

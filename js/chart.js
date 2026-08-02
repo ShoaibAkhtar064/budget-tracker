@@ -42,4 +42,61 @@ expenseChart = new Chart(ctx, {
 
 }
 
+function renderIncomeExpenseChart() {
+
+    const ctx = document
+        .getElementById("incomeExpenseChart")
+        .getContext("2d");
+
+    if (incomeExpenseChart) {
+        incomeExpenseChart.destroy();
+    }
+
+    incomeExpenseChart = new Chart(ctx, {
+
+        type: "bar",
+
+        data: {
+
+            labels: ["Income", "Expense"],
+
+            datasets: [
+
+                {
+
+                    label: "Financial Summary",
+
+                    data: [
+                        calculateIncome(),
+                        calculateExpense()
+                    ],
+
+                    borderWidth: 1
+
+                }
+
+            ]
+
+        },
+
+        options: {
+
+            responsive: true,
+
+            scales: {
+
+                y: {
+
+                    beginAtZero: true
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
+
 
