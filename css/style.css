@@ -6,19 +6,19 @@
 
 body{
     font-family:Arial, sans-serif;
-    background:#f4f4f4;
-    color:#333;
+    background:#f7f4f4;
+    color:#292929;
 }
 
 header{
-    background:#2563eb;
+    background:#2465f1;
     color:white;
     padding:20px;
     text-align:center;
 }
 
 nav{
-    background:#1e40af;
+    background:#304aa0;
 }
 
 nav ul{
@@ -28,7 +28,7 @@ nav ul{
 }
 
 nav li{
-    margin:15px;
+    margin:8px;
 }
 nav a{
     color:white;
@@ -47,7 +47,7 @@ background:white;
 padding:20px;
 border-radius:10px;
 text-align:center;
-box-shadow:0 0 5px rgba(0,0,0,.2);
+box-shadow:0 0 5px rgba(171, 5, 5, 0.2);
 }
 
 .transaction-form{
@@ -87,6 +87,7 @@ margin-top:30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
+    padding: 20px;
     margin: 30px 0;
 }
 
