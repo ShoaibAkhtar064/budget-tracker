@@ -17,6 +17,10 @@ const expenses = document.getElementById("expenses");
 
 function displayTransactions() {
 
+      if (!transactionList) {
+        return;
+    }
+
     transactionList.innerHTML = "";
 
     transactions.forEach(function (transaction) {
@@ -107,19 +111,24 @@ function calculateBalance() {
 
 function updateSummary() {
 
-    balance.textContent =
-        `$${calculateBalance().toFixed(2)}`;
+    if (balance) {
+        balance.textContent = `$${calculateBalance().toFixed(2)}`;
+    }
 
-    income.textContent =
-        `$${calculateIncome().toFixed(2)}`;
+    if (income) {
+        income.textContent = `$${calculateIncome().toFixed(2)}`;
+    }
 
-    expenses.textContent =
-        `$${calculateExpense().toFixed(2)}`;
+    if (expenses) {
+        expenses.textContent = `$${calculateExpense().toFixed(2)}`;
+    }
 
 }
 
 
-form.addEventListener("submit", function (event) {
+if (form)
+{
+    form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -177,6 +186,7 @@ if (Number(amountInput.value) <= 0) {
 
 });
 
+}
 
 loadTransactions();
 

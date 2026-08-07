@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker | Statistics</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Budget Tracker</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="transactions.html">Statistics</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Financial Summary -->
+      <section class="dashboard">
+        <div class="card">
+          <h3>Balance</h3>
+          <p id="balance">$0.00</p>
+        </div>
+
+        <div class="card">
+          <h3>Income</h3>
+          <p id="income">$0.00</p>
+        </div>
+
+        <div class="card">
+          <h3>Expenses</h3>
+          <p id="expenses">$0.00</p>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section class="charts">
+        <div class="chart-card">
+          <h2>Expense by Category</h2>
+          <canvas id="expenseChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <h2>Income vs Expense</h2>
+          <canvas id="incomeExpenseChart"></canvas>
+        </div>
+      </section>
+
+      <!-- Currency API -->
+      <section class="currency">
+        <h2>Live Currency Rates</h2>
+
+        <div id="currencyRates">
+          <p>Loading exchange rates...</p>
+        </div>
+      </section>
+
+      <!-- Transaction Filters -->
+      <section class="filters">
+        <h2>Filter Transactions</h2>
+
+        <p>Filters will be added in the next step.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Budget Tracker</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
