@@ -10,37 +10,142 @@ const dateInput = document.getElementById("date");
 
 const transactionList = document.getElementById("transaction-list");
 
+const categoryFilter = document.getElementById("category-filter");
+const typeFilter = document.getElementById("type-filter");
+const dateFilter = document.getElementById("date-filter");
+const clearFilters = document.getElementById("clear-filters");
+
 const balance = document.getElementById("balance");
 const income = document.getElementById("income");
 const expenses = document.getElementById("expenses");
 
 
-function displayTransactions() {
 
-      if (!transactionList) {
+function populateCategoryFilter() {
+
+    if (!categoryFilter) {
+        return;
+    }
+
+    const categories = [];
+
+    transactions.forEach(function (transaction) {
+
+        if (!categories.includes(transaction.category)) {
+            categories.push(transaction.category);
+        }
+
+    });
+
+    categoryFilter.innerHTML = "";
+
+    const allOption = document.createElement("option");
+
+    allOption.value = "all";
+    allOption.textContent = "All Categories";
+
+    categoryFilter.appendChild(allOption);
+
+
+    categories.forEach(function (category) {
+
+        const option = document.createElement("option");
+
+        option.value = category;
+        option.textContent = category;
+
+        categoryFilter.appendChild(option);
+
+    });
+
+}
+
+
+
+function displayTransactions(filteredTransactions = transactions) {
+
+    if (!transactionList) {
         return;
     }
 
     transactionList.innerHTML = "";
 
-    transactions.forEach(function (transaction) {
+    filteredTransactions.forEach(function (transaction) {
 
         const row = document.createElement("tr");
 
         row.innerHTML = `
             <td>${transaction.description}</td>
             <td>${transaction.category}</td>
-            <td>$${transaction.amount}</td>
+            <td>$${transaction.amount.toFixed(2)}</td>
             <td>${transaction.type}</td>
             <td>${transaction.date}</td>
-           <td>
-                 <button onclick="deleteTransaction(${transaction.id})">
-                        Delete
-                 </button>
-</td>
+            <td>
+                <button onclick="deleteTransaction(${transaction.id})">
+                    Delete
+                </button>
+            </td>
         `;
 
         transactionList.appendChild(row);
+
+    });
+
+}
+
+
+function filterTransactions() {
+
+    const selectedCategory = categoryFilter.value;
+    const selectedType = typeFilter.value;
+    const selectedDate = dateFilter.value;
+
+    const filteredTransactions = transactions.filter(function (transaction) {
+
+        const categoryMatches =
+            selectedCategory === "all" ||
+            transaction.category === selectedCategory;
+
+        const typeMatches =
+            selectedType === "all" ||
+            transaction.type === selectedType;
+
+        const dateMatches =
+            selectedDate === "" ||
+            transaction.date === selectedDate;
+
+        return categoryMatches && typeMatches && dateMatches;
+
+    });
+
+    displayTransactions(filteredTransactions);
+
+}
+
+
+if (categoryFilter) {
+    categoryFilter.addEventListener("change", filterTransactions);
+}
+
+if (typeFilter) {
+    typeFilter.addEventListener("change", filterTransactions);
+}
+
+if (dateFilter) {
+    dateFilter.addEventListener("change", filterTransactions);
+}
+
+if (clearFilters) {
+
+    clearFilters.addEventListener("click", function () {
+
+        categoryFilter.value = "all";
+
+        typeFilter.value = "all";
+
+        dateFilter.value = "";
+
+        displayTransactions();
 
     });
 
@@ -53,6 +158,8 @@ function deleteTransaction(id) {
     });
 
     saveTransactions();
+
+    populateCategoryFilter();
 
     displayTransactions();
 
@@ -189,6 +296,8 @@ if (Number(amountInput.value) <= 0) {
 }
 
 loadTransactions();
+
+populateCategoryFilter();
 
 displayTransactions();
 

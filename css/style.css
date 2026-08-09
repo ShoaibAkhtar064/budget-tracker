@@ -108,14 +108,59 @@ canvas {
     max-height: 350px;
 }
 
-.currency,
-.filters{
-    background:#fff;
-    padding:20px;
-    margin:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.1);
 
+.currency-section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.currency-section h2 {
+    margin-bottom: 20px;
+}
+
+.currency-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#exchange-rate {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Filter Transactions */
+
+.filter-section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.filter-section h2 {
+    margin-bottom: 20px;
+}
+
+.filter-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-section select,
+.filter-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-section button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
 }
 
 @media (max-width:768px){
