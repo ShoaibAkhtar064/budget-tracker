@@ -18,6 +18,8 @@ This project was developed as a Code:You Web Development Capstone Project to dem
 * JavaScript (ES6)
 * Chart.js
 * Local Storage
+* Fetch API
+* Frankfurter API
 
 ---
 
@@ -40,12 +42,18 @@ This project was developed as a Code:You Web Development Capstone Project to dem
 * Visualize financial data using Chart.js.
 * Expense by Category chart.
 * Income vs. Expense chart.
+* Separate Statistics page.
+* Live currency exchange rates using the Frankfurter API.
+* Currency selection for viewing exchange rates.
+* Filter transactions by category.
+* Filter transactions by type.
+* Filter transactions by date.
+* Clear transaction filters.
 
 ---
 
 ## Project Structure
 
-```text
 budget-tracker/
 │
 ├── index.html
@@ -57,8 +65,6 @@ budget-tracker/
 │   ├── storage.js
 │   ├── chart.js
 │   └── api.js
-├── assets/
-│   └── images/
 └── README.md
 ```
 
@@ -88,14 +94,23 @@ budget-tracker/
 * ✔ Local Storage
 * ✔ Financial Summary
 * ✔ Chart.js Integration
+* ✔ Third-party API Integration
+* ✔ Frankfurter API Integration
+* ✔ Live Currency Exchange Rates
+* ✔ Currency Selection
+* ✔ Transaction Filtering
+* ✔ Category Filtering
+* ✔ Type Filtering
+* ✔ Date Filtering
+* ✔ Clear Filters
+* ✔ Statistics Page
+* ✔ UI Improvements
 
 ### In Progress
 
-* ⬜ Third-party API Integration
-* ⬜ Transaction Filtering
-* ⬜ Final UI Improvements
-* ⬜ Project Testing
 * ⬜ Final Documentation
+* ⬜ Final Project Testing
+* ⬜ GitHub Pages Deployment
 
 ---
 
@@ -121,13 +136,13 @@ All AI-generated suggestions were reviewed, understood, tested, and modified bef
 
 ## Future Improvements
 
-The following features will be completed before the final submission:
+The following improvements may be considered for future versions:
 
-* Integrate a third-party API using the Fetch API.
-* Add transaction filtering by category.
-* Improve the user interface and user experience.
-* Perform final testing and fix any remaining bugs.
-* Complete the final project documentation.
+- Add additional financial reports.
+- Add more advanced transaction filtering options.
+- Improve accessibility.
+- Add additional data visualization options.
+- Add more currency conversion features.
 
 ---
 

@@ -11,14 +11,14 @@ body{
 }
 
 header{
-    background:#1558e8;
+    background:#2563eb;
     color:white;
-    padding:20px;
+    padding:25px 20px;
     text-align:center;
 }
 
 nav{
-    background:#304aa0;
+    background:#1e3a8a;
 }
 
 nav ul{
@@ -33,6 +33,12 @@ nav li{
 nav a{
     color:white;
     text-decoration:none;
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    background: #527ddb;
+    border-radius: 5px;
 }
 
 .dashboard{
@@ -47,7 +53,8 @@ background:white;
 padding:20px;
 border-radius:10px;
 text-align:center;
-box-shadow:0 0 5px rgba(171, 5, 5, 0.2);
+border-top: 4px solid #2563eb;
+box-shadow:0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .transaction-form{
@@ -55,6 +62,8 @@ background:white;
 padding:20px;
 margin:20px;
 border-radius:10px;
+border-top: 4px solid #2563eb;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 input,select,button{
@@ -73,14 +82,6 @@ th,td{
 border:1px solid #ddd;
 padding:12px;
 text-align:center;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#2563eb;
-color:white;
-margin-top:30px;
 }
 
 .charts {
@@ -114,6 +115,8 @@ canvas {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .currency-section h2 {
@@ -138,6 +141,8 @@ canvas {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .filter-section h2 {
@@ -161,6 +166,53 @@ canvas {
     width: 100%;
     padding: 10px;
     cursor: pointer;
+}
+
+/* Transaction Table */
+
+.transaction-table {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.transaction-table h2 {
+    margin-bottom: 20px;
+}
+
+.transaction-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.transaction-table th {
+    background: #f4f4f4;
+}
+
+.transaction-table button {
+    width: auto;
+    padding: 8px 12px;
+    margin: 0;
+    cursor: pointer;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#1e3a8a;
+color:white;
+margin-top:30px;
 }
 
 @media (max-width:768px){
