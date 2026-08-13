@@ -104,12 +104,12 @@ budget-tracker/
 * ✔ Date Filtering
 * ✔ Clear Filters
 * ✔ Statistics Page
-* ✔ UI Improvements
+* ✔ Final Project Testing
+* ✔ Final Responsive Design Testing
+* ✔ Final UI Improvements
 
 ### In Progress
 
-* ⬜ Final Documentation
-* ⬜ Final Project Testing
 * ⬜ GitHub Pages Deployment
 
 ---

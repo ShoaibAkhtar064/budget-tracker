@@ -13,6 +13,7 @@
       <h1>Budget Tracker</h1>
     </header>
 
+    <!-- Main navigation -->
     <nav>
       <ul>
         <li><a href="index.html">Dashboard</a></li>
@@ -39,7 +40,7 @@
         </div>
       </section>
 
-      <!-- Charts -->
+      <!-- Financial Charts -->
       <section class="charts">
         <div class="chart-card">
           <h2>Expense by Category</h2>
@@ -52,20 +53,19 @@
         </div>
       </section>
 
+      <!-- Currency Conversion -->
       <section class="currency-section">
         <h2>Live Currency Rates</h2>
 
         <label for="currency"> Select Currency </label>
 
-        <select id="currency">
-          <option value="PKR">PKR</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-        </select>
+        <select id="currency"></select>
 
+        <!-- Exchange rate is displayed here -->
         <p id="exchange-rate">Loading...</p>
       </section>
 
+      <!-- Transaction Filters -->
       <section class="filter-section">
         <h2>Filter Transactions</h2>
 
@@ -90,6 +90,7 @@
         <button type="button" id="clear-filters">Clear Filters</button>
       </section>
 
+      <!-- Transaction Table -->
       <section class="transaction-table">
         <h2>Transactions</h2>
         <table>
@@ -103,10 +104,11 @@
               <th>Action</th>
             </tr>
           </thead>
+
+          //Transactions are added dynamically with JavaScript
           <tbody id="transaction-list"></tbody>
         </table>
       </section>
-      
     </main>
 
     <footer>

@@ -1,3 +1,4 @@
+// Store all transactions
 let transactions = [];
 
 const form = document.getElementById("transaction-form");
@@ -10,6 +11,7 @@ const dateInput = document.getElementById("date");
 
 const transactionList = document.getElementById("transaction-list");
 
+// Filter elements
 const categoryFilter = document.getElementById("category-filter");
 const typeFilter = document.getElementById("type-filter");
 const dateFilter = document.getElementById("date-filter");
@@ -20,7 +22,7 @@ const income = document.getElementById("income");
 const expenses = document.getElementById("expenses");
 
 
-
+// Populate category filter with available categories
 function populateCategoryFilter() {
 
     if (!categoryFilter) {
@@ -61,7 +63,7 @@ function populateCategoryFilter() {
 }
 
 
-
+// Display transactions in the table
 function displayTransactions(filteredTransactions = transactions) {
 
     if (!transactionList) {
@@ -93,7 +95,7 @@ function displayTransactions(filteredTransactions = transactions) {
 
 }
 
-
+// Filter transactions by category, type, and date
 function filterTransactions() {
 
     const selectedCategory = categoryFilter.value;
@@ -122,7 +124,7 @@ function filterTransactions() {
 
 }
 
-
+// Listen for filter changes
 if (categoryFilter) {
     categoryFilter.addEventListener("change", filterTransactions);
 }
@@ -151,6 +153,7 @@ if (clearFilters) {
 
 }
 
+// Delete a transaction
 function deleteTransaction(id) {
 
     transactions = transactions.filter(function (transaction) {
@@ -171,7 +174,7 @@ function deleteTransaction(id) {
 
 }
 
-
+// Calculate total income
 function calculateIncome() {
 
     let totalIncome = 0;
@@ -190,6 +193,7 @@ function calculateIncome() {
 
 }
 
+// Calculate total expenses
 function calculateExpense() {
 
     let totalExpense = 0;
@@ -208,14 +212,14 @@ function calculateExpense() {
 
 }
 
-
+// Calculate current balance
 function calculateBalance() {
 
     return calculateIncome() - calculateExpense();
 
 }
 
-
+// Update financial summary cards
 function updateSummary() {
 
     if (balance) {
@@ -232,7 +236,7 @@ function updateSummary() {
 
 }
 
-
+// Handle transaction form submission
 if (form)
 {
     form.addEventListener("submit", function (event) {
@@ -259,6 +263,7 @@ if (form)
 
 }
 
+// Validate transaction amount
 if (Number(amountInput.value) <= 0) {
 
     alert("Amount must be greater than zero.");
@@ -266,6 +271,7 @@ if (Number(amountInput.value) <= 0) {
     return;
 }
 
+// Create a new transaction object
  const transaction = {
         id: Date.now(),
         description: descriptionInput.value,
@@ -275,11 +281,13 @@ if (Number(amountInput.value) <= 0) {
         date: dateInput.value
     };
 
-    console.log(transaction);
+  
 
     transactions.push(transaction);
   
     saveTransactions();
+
+    populateCategoryFilter();
 
     displayTransactions();
 
@@ -295,6 +303,7 @@ if (Number(amountInput.value) <= 0) {
 
 }
 
+// Load saved transactions when the page starts
 loadTransactions();
 
 populateCategoryFilter();

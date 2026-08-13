@@ -1,8 +1,7 @@
-console.log("Chart.js Loaded");
-
 let expenseChart;
 let incomeExpenseChart;
 
+// Create Expense by Category Pie Chart
 function renderExpenseChart() {
 
     const canvas = document.getElementById("expenseChart");
@@ -15,6 +14,7 @@ function renderExpenseChart() {
 
     const expenseData = {};
 
+ // Group expenses by category
     transactions.forEach(function (transaction) {
 
         if (transaction.type === "expense") {
@@ -33,6 +33,8 @@ function renderExpenseChart() {
 
     });
 
+
+     // Destroy the previous chart before creating a new one
     if (expenseChart) {
         expenseChart.destroy();
     }
@@ -57,6 +59,7 @@ function renderExpenseChart() {
 
 }
 
+// Create Income vs Expense Bar Chart
 function renderIncomeExpenseChart() {
 
     const canvas = document.getElementById("incomeExpenseChart");
