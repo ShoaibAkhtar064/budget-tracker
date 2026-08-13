@@ -65,8 +65,8 @@ budget-tracker/
 │   ├── storage.js
 │   ├── chart.js
 │   └── api.js
+├── screenshots/
 └── README.md
-```
 
 ---
 
@@ -83,6 +83,44 @@ budget-tracker/
 5. The application will open in your web browser.
 
 ---
+
+## Screenshots
+
+### Dashboard - 1
+
+![Budget Tracker Dashboard](screenshots/dashboard-1.png)
+
+### Dashboard - 2
+
+![Budget Tracker Dashboard](screenshots/dashboard-2.png)
+
+### Dashboard - 3
+
+![Budget Tracker Dashboard](screenshots/dashboard-3.png)
+
+### Statistics - 1
+
+![Budget Tracker Statistics](screenshots/statistics-1.png)
+
+### Statistics - 2
+
+![Budget Tracker Transactions](screenshots/statistics-2.png)
+
+### Statistics - 3
+
+![Budget Tracker Statistics](screenshots/statistics-3.png)
+
+### Statistics - 4
+
+![Budget Tracker Statistics](screenshots/statistics-4.png)
+
+### Mobile - 1
+
+![Budget Tracker Mobile View](screenshots/mobile-1.png)
+
+### Mobile - 2
+
+![Budget Tracker Mobile View](screenshots/mobile-2.png)
 
 ## Current Project Status
 
