@@ -70,6 +70,13 @@ budget-tracker/
 
 ---
 
+## Live Demo
+
+The project is deployed using GitHub Pages.
+
+[View Live Budget Tracker](https://shoaibakhtar064.github.io/budget-tracker/)
+
+
 ## Installation
 
 1. Clone this repository.
@@ -145,10 +152,9 @@ budget-tracker/
 * ✔ Final Project Testing
 * ✔ Final Responsive Design Testing
 * ✔ Final UI Improvements
+* ✔ GitHub Pages Deployment
 
 ### In Progress
-
-* ⬜ GitHub Pages Deployment
 
 ---
 
